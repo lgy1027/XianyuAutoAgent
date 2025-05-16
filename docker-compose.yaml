@@ -6,5 +6,6 @@ services:
     restart: always
     volumes:
       - ./.env:/app/.env
+      - ./data:/app/data  # 数据挂在
       # - ./pompts:/app/pompts # 自定义提示词需按照prompts文件名定义
 
