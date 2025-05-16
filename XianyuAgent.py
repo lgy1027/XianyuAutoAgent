@@ -10,7 +10,7 @@ class XianyuReplyBot:
         # 初始化OpenAI客户端
         self.client = OpenAI(
             api_key=os.getenv("OPENAI_API_KEY"),
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+            base_url=os.getenv("OPEN_URL", "https://dashscope.aliyuncs.com/compatible-mode").rstrip('/') + '/v1'
         )
         self._init_system_prompts()
         self._init_agents()
@@ -213,7 +213,7 @@ class BaseAgent:
     def _call_llm(self, messages: List[Dict], temperature: float = 0.4) -> str:
         """调用大模型"""
         response = self.client.chat.completions.create(
-            model="qwen-max",
+            model=os.getenv("MODEL_NAME", "qwen-max"),
             messages=messages,
             temperature=temperature,
             max_tokens=500,
@@ -232,7 +232,7 @@ class PriceAgent(BaseAgent):
         messages[0]['content'] += f"\n▲当前议价轮次：{bargain_count}"
 
         response = self.client.chat.completions.create(
-            model="qwen-max",
+            model=os.getenv("MODEL_NAME", "qwen-max"),
             messages=messages,
             temperature=dynamic_temp,
             max_tokens=500,
@@ -253,7 +253,7 @@ class TechAgent(BaseAgent):
         # messages[0]['content'] += "\n▲知识库：\n" + self._fetch_tech_specs()
 
         response = self.client.chat.completions.create(
-            model="qwen-max",
+            model=os.getenv("MODEL_NAME", "qwen-max"),
             messages=messages,
             temperature=0.4,
             max_tokens=500,

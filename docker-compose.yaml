@@ -1,0 +1,12 @@
+version: '3'
+services:
+  xianyu-agent:
+    container_name: xianyu-agent
+    build: .
+    image: xianyu-agent:latest
+    restart: always
+    volumes:
+      - ./env:/app/.env  # 挂载本地.env文件到容器
+    # 如需指定环境变量文件可取消注释下面配置
+    # env_file:
+    #   - .env

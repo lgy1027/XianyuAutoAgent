@@ -266,6 +266,7 @@ class XianyuLive:
                 item_description,
                 context=context
             )
+            bot_reply = re.sub(r'<think>.*?</think>', '', bot_reply, flags=re.DOTALL).lstrip()
             
             # 检查是否为价格意图，如果是则增加议价次数
             if bot.last_intent == "price":

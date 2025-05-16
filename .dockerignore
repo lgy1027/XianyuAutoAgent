@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.python-version
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log
+
+# Docker
+Dockerfile
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+
+# Local files
+.env
+*.log
+logs/
+
+# Git
+.git/
+.gitignore
+
+# 测试和临时文件
+tmp/
+*.tmp
+*.bak
