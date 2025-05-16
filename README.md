@@ -54,10 +54,10 @@
 - Python 3.8+
 - NodeJS 18+
 
-### 安装步骤
+### 源码部署
 ```bash
 1. 克隆仓库
-git clone https://github.com/shaxiu/XianyuAutoAgent.git
+git clone https://github.com/lgy1027/XianyuAutoAgent.git
 cd xianyu-autoagent
 
 2. 安装依赖
@@ -68,25 +68,24 @@ pip install -r requirements.txt
 
 OPENAI_API_KEY=your_api_key_here
 COOKIES_STR=your_cookies_here
+OPEN_URL=地址，不需要带/v1
+MODEL_NAME=模型ID
 
-注意：代码中OPENAI_API_KEY默认使用的是通义千问，如需使用其他API，请自行修改代码中的模型地址和模型名称；
 COOKIES_STR自行在闲鱼网页端获取cookies
 
 4. 创建提示词文件prompts/*_prompt.txt
 默认提供四个模板，可自行修改
-```
 
-### 使用方法
-
-运行主程序：
-```bash
+5. 运行主程序：
 python main.py
 ```
 
 ### docker部署
-1、创建提示词文件prompts/*_prompt.txt
+docker镜像目前支持amd和arm架构
 
-2、构建镜像：docker build -t xianyu-agent:latest -f dockerfile .
+0、可直接使用镜像：liguoyu3564/xianyu:latest 或者通过下面步骤构建景象
+
+1、构建镜像：docker build -t xianyu-agent:latest -f dockerfile .
 
 3、创建.env文件，添加如下信息：
 ```
