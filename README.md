@@ -83,6 +83,20 @@ COOKIES_STR自行在闲鱼网页端获取cookies
 python main.py
 ```
 
+### docker部署
+1、创建提示词文件prompts/*_prompt.txt
+
+2、构建镜像：docker build -t xianyu-agent:latest -f dockerfile .
+
+3、创建.env文件，添加如下信息：
+```
+COOKIES_STR=
+OPENAI_API_KEY=
+OPEN_URL=地址，不需要带/v1
+MODEL_NAME=模型ID
+```
+4、启动容器：docker compose up -d
+
 ### 自定义提示词
 
 可以通过编辑 `prompts` 目录下的文件来自定义各个专家的提示词：
@@ -111,31 +125,6 @@ python main.py
 https://github.com/cv-cat/XianYuApis
 
 感谢<a href="https://github.com/cv-cat">@CVcat</a>的技术支持
-
-## 📱 交流群
-欢迎加入项目交流群，交流技术、分享经验、互助学习。
-<div align="center">
-  <img src="./images/wx_group.png" width="400px" alt="交流群">
-</div>
-
-## 💼 寻找机会
-
-### <a href="https://github.com/shaxiu">@Shaxiu</a>
-**🔍寻求方向**：**AI产品经理实习**  
-**🛠️项目贡献：**：需求分析、agent方案设计与实现  
-**📫 联系：** **email**:coderxiu@qq.com；**wx:** coderxiu
-
-### <a href="https://github.com/cv-cat">@CVcat</a>
-**🔍寻求方向**：**研发工程师实习**（python、java、逆向、爬虫）  
-**🛠️项目贡献：**：闲鱼逆向工程  
-**📫 联系：** **email:** 992822653@qq.com；**wx:** CVZC15751076989
-## ☕ 请喝咖啡
-您的☕和⭐将助力项目持续更新：
-
-<div align="center">
-  <img src="./images/wechat_pay.jpg" width="400px" alt="微信赞赏码"> 
-  <img src="./images/alipay.jpg" width="400px" alt="支付宝收款码">
-</div>
 
 
 ## 📈 Star 趋势
