@@ -111,29 +111,10 @@ MODEL_NAME=模型ID
 欢迎通过 Issue 提交建议或 PR 贡献代码，请遵循 [贡献指南](https://contributing.md/)
 
 
-
-## 🛡 注意事项
-
-⚠️ 注意：**本项目仅供学习与交流，如有侵权联系作者删除。**
-
-鉴于项目的特殊性，开发团队可能在任何时间**停止更新**或**删除项目**。
-
-如需学习交流，请联系：[coderxiu@qq.com](https://mailto:coderxiu@qq.com/)
-
 ## 🧸特别鸣谢
-本项目参考了以下开源项目：
-https://github.com/cv-cat/XianYuApis
+本项目基于以下开源项目修改：
+https://github.com/shaxiu/XianyuAutoAgent
 
-感谢<a href="https://github.com/cv-cat">@CVcat</a>的技术支持
-
-
-## 📈 Star 趋势
-<a href="https://www.star-history.com/#shaxiu/XianyuAutoAgent&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=shaxiu/XianyuAutoAgent&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=shaxiu/XianyuAutoAgent&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=shaxiu/XianyuAutoAgent&type=Date" />
- </picture>
-</a>
+感谢<a href="https://github.com/shaxiu/XianyuAutoAgent">@shaxiu</a>的技术支持
 
 
